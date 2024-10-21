@@ -22,17 +22,41 @@ function round(value, decimals) {
 // Round to the user's number of decimals
 function round_user(value) {
     // Get the number of decimals from the "rounding" box
-    let d = Number(document.getElementById("rounding").value)
-
+    let d = Number(document.getElementById("rounding").value);
+    let round_answer = Math.round(round_user)* 10**d;
+    return round_answer;
 }
+
+function delta(a, b){
+    return (a - b);
+}
+
+function slope(x1, y1, x2, y2){
+    let m = delta(y2, y1) / delta(x2, x1);
+    return m;
+}
+
+function average(n1, n2){
+    avg = (n1 + n2) / 2;
+    return avg;
+}
+
+function length(x1, y1, x2, y2){
+    let delx = (delta(x2, y2))**2;
+    let dely = (delta(y2, y1))**2;
+    let length_answer = Math.sqrt(delx + dely);
+    return length_answer;
+}
+
 
 // Calculate the y-value of a parabola from standand form
 function y_quad(a, b, c, x) {
-
+    
 }
 
 // Determine the zeros of a quadratic using user-inputs for a, b, and c
 function zeros() {
+
 }
 
 // Determine the vertex of a quadratic using user-inputs for a, b, and c
